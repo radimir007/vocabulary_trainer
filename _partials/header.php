@@ -1,6 +1,6 @@
 <nav>
     <div class="logo">
-        <img src="assets/img/logo_transparent_black.png" alt="">
+        <a href="index.php"><img src="assets/img/logo.png" alt=""></a>
     </div>
-    <a href="#">Log In</a>
+    <a href="#"><i class="fa-regular fa-circle-user"></i></a>
 </nav>
