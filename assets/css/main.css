@@ -1,7 +1,47 @@
 /* Web Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/* Global */
 body {
     font-family: "Poppins", sans-serif;
     padding: 1rem 6% 0;
+}
+
+/* Main content */
+h1 {
+    font-size: 2rem;
+}
+
+main {
+    margin-top: 5rem;
+}
+
+.subject-list {
+    display: flex;
+    column-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.subject-list article {
+    flex-basis: 22%;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 35px #ccc;
+}
+
+.subject-list article img {
+    max-width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.subject-list article h2 {
+    font-size: 1.2rem;
+    margin: 0 0 .7rem;
+}
+
+.subject-list article small {
+    color: #666;
+}
+
+.subject-list .subject-description {
+    padding: 1.3rem 1.5rem 1.5rem;
 }

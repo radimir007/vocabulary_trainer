@@ -2,8 +2,33 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: .7rem;
 }
 
 nav .logo img {
-    max-width: 250px;
+    max-width: 50px;
+}
+
+nav .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+nav .logo span {
+    position: relative;
+    top: 2px;
+    margin-left: .6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+nav > a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
 }
