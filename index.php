@@ -1,3 +1,5 @@
+<?php require_once "_inc/config.php" ?>
+
 <!DOCTYPE html>
 <html lang="sk-SK">
 <head>
@@ -16,21 +18,18 @@
     <main>
         <h1>Subjects</h1>
         <section class="subject-list">
-            <article>
-                <img src="assets/img/german.jpg" alt="">
-                <div class="subject-description">
-                    <h2>German</h2>
-                    <small>14 thematic units</small>
-                </div>
-            </article>
-            <article>
-                <img src="assets/img/british.jpg" alt="">
-                <div class="subject-description">
-                    <h2>English</h2>
-                    <small>11 thematic units</small>
-                </div>
+            <?php foreach (get_subject_list() as $subject): ?>
 
-            </article>
+                <article>
+                    <img src="assets/img/<?= $subject[1] ?>" alt="">
+                    <div class="subject-description">
+                        <h2><?= $subject[0] ?></h2>
+                        <small>14 thematic units</small>
+                    </div>
+                </article>
+
+            <?php endforeach; ?>
+
         </section>
     </main>
 </body>
