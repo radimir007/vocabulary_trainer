@@ -1,7 +1,7 @@
 <?php require_once "_inc/config.php" ?>
 
 <!DOCTYPE html>
-<html lang="sk-SK">
+<html lang="sk-SK" xmlns:script="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -32,5 +32,8 @@
 
         </section>
     </main>
+
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
 </body>
 </html>
