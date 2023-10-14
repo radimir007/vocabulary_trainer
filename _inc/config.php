@@ -12,7 +12,8 @@ $config = ([
 ]);
 
 // Database connection
-$db = mysqli_connect( $config['db']['host'], $config['db']['username'], $config['db']['password'], $config['db']['name'], $config['db']['port'] );
+$db = mysqli_connect( $config['db']['host'], $config['db']['username'],
+    $config['db']['password'], $config['db']['name'], $config['db']['port'] );
 
 
 

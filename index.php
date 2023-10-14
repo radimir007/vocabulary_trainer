@@ -24,7 +24,7 @@
                     <img src="assets/img/<?= $subject[1] ?>" alt="">
                     <div class="subject-description">
                         <h2><?= $subject[0] ?></h2>
-                        <small>14 thematic units</small>
+                        <small><?= get_th_count($subject[0]) ?> thematic units</small>
                     </div>
                 </article>
 
