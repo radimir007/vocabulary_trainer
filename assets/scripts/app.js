@@ -43,3 +43,14 @@ subjectList.on("click", function () {
         });
     }
 });
+
+
+$(document).on('click', $(".th-units li button"), function () {
+    let button = this.activeElement;
+    if ($(button).parents("li").attr("id")) {
+        selectedThemUnit = $(button).parents("li").attr("id");
+    }
+
+
+
+});
