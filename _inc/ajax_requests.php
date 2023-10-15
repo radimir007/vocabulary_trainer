@@ -1,8 +1,10 @@
 <?php
-    $data = $_POST["action"];
+    require_once "functions.php";
 
-    switch ($data) {
+    $action = $_POST["action"];
+    $subject = $_POST["subject"];
+
+    switch ($action) {
         case "get_th_units":
-            get_th_units();
-            break;
+            die(json_encode(get_th_units($subject)));
     }

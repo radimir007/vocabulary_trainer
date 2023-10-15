@@ -31,6 +31,14 @@
             <?php endforeach; ?>
 
         </section>
+
+        <section class="th-units">
+            <h2>Thematic units</h2>
+            <ul>
+
+            </ul>
+        </section>
+
     </main>
 
     <script src="assets/scripts/jquery.min.js"></script>

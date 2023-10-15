@@ -13,19 +13,24 @@ h1 {
 }
 
 main {
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .subject-list {
     display: flex;
     column-gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .subject-list article {
     flex-basis: 22%;
     border-radius: 1rem;
     box-shadow: 10px 10px 35px #ccc;
+    cursor: pointer;
+}
+
+.subject-list article.active {
+    background: rgba(19, 255, 0, 0.49);
 }
 
 .subject-list article img {
@@ -44,4 +49,63 @@ main {
 
 .subject-list .subject-description {
     padding: 1.3rem 1.5rem 1.5rem;
+}
+
+.th-units {
+    padding-top: 5rem;
+    width: 93%;
+    margin: 0 auto;
+}
+
+.th-units h2 {
+    text-align: center;
+    display: none;
+}
+
+.th-units ul {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+}
+
+.th-units ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.th-units ul li:first-child {
+    border-top: 1px solid #dddddd;
+}
+
+.th-units li span {
+    font-weight: bold;
+}
+
+.th-units li small {
+    display: block;
+    margin-top: .6rem;
+    color: #333;
+}
+
+.th-units li button {
+    background: none;
+    border: 2px solid #cccccc;
+    border-radius: 2rem;
+    padding: .6rem 1rem 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.th-units li button:hover {
+    background: #cccccc;
+}
+
+.th-units li button i {
+    color: green;
+    font-size: 1.5rem;
+    position: relative;
+    top: 3px;
+    margin-right: .5rem;
 }
