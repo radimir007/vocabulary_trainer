@@ -1,6 +1,10 @@
 const subjectList = $(".subject-list").find("article");
 let thUnits = $(".th-units ul");
 let thUnitsHeading = $(".th-units h2");
+let dialog = document.querySelector("dialog");
+let jDialog = $("dialog");
+
+let dialogCloseBtn = $(".dialog-close-btn");
 
 let selectedThemUnit = null;
 
@@ -15,7 +19,7 @@ subjectList.on("click", function () {
     $(this).addClass("active");
     if (oldSubjectName !== subjectName) {
         thUnitsHeading.slideDown();
-        thUnits.hide()
+        thUnits.hide();
         thUnits.children().remove();
         $.ajax({
             "url": "_inc/ajax_requests.php",
@@ -44,13 +48,18 @@ subjectList.on("click", function () {
     }
 });
 
-
-$(document).on('click', $(".th-units li button"), function () {
-    let button = this.activeElement;
-    if ($(button).parents("li").attr("id")) {
-        selectedThemUnit = $(button).parents("li").attr("id");
+// Handle button click event
+$(document).on("click", $(".th-units ul li button"), function(event) {
+    if (event.target.innerText === "Practice") {
+        let unit = $(event.target).parents("li").attr("id");
+        let unitName = $(event.target).siblings("div").find("span").text();
+        dialog.showModal();
+        dialog.classList.add("active");
+        jDialog.find("h2").text(unitName);
     }
+});
 
-
-
+dialogCloseBtn.on("click", () => {
+    dialog.classList.remove("active");
+    dialog.close();
 });

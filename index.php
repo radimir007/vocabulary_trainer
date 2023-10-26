@@ -39,6 +39,28 @@
             </ul>
         </section>
 
+        <dialog>
+            <button class="dialog-close-btn">
+                <i class="fa-solid fa-close"></i>
+            </button>
+            <h2>Undefined</h2>
+            <section class="dialog-btn-holder">
+                <button>
+                    <i class="fa-solid fa-play" style="color: green;"></i>
+                    <span>Start quiz</span>
+                </button>
+                <button>
+                    <i class="fa-solid fa-clipboard-list" style="color: blue;"></i>
+                    <span>Flashcards</span>
+                </button>
+                <button>
+                    <i class="fa-solid fa-book-open" style="color: red;"></i>
+                    <span>Study</span>
+                </button>
+            </section>
+
+        </dialog>
+
     </main>
 
     <script src="assets/scripts/jquery.min.js"></script>

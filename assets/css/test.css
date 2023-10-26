@@ -1,0 +1,33 @@
+dl {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    font-family: Tahoma, sans-serif;
+}
+
+
+dl > div {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: .5rem;
+    align-items: center;
+}
+dt {
+    font-weight: bold;
+    text-align: right;
+    flex-basis: 45%;
+}
+
+dd {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    flex-basis: 45%;
+}
