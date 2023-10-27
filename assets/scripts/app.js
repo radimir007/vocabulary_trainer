@@ -3,12 +3,13 @@ let thUnits = $(".th-units ul");
 let thUnitsHeading = $(".th-units h2");
 let dialog = document.querySelector("dialog");
 let jDialog = $("dialog");
-
 let dialogCloseBtn = $(".dialog-close-btn");
+let dialogBtn = $(".dialog-btn-holder > button");
+let dialogForm = $(".dialog-form");
+let dialogThUnit = $("#dialog-th-unit");
+
 
 let selectedThemUnit = null;
-
-
 let subjectName = null, oldSubjectName = null;
 
 // Load thematic units after clicking on subject
@@ -51,7 +52,7 @@ subjectList.on("click", function () {
 // Handle button click event
 $(document).on("click", $(".th-units ul li button"), function(event) {
     if (event.target.innerText === "Practice") {
-        let unit = $(event.target).parents("li").attr("id");
+        selectedThemUnit = $(event.target).parents("li").attr("id");
         let unitName = $(event.target).siblings("div").find("span").text();
         dialog.showModal();
         dialog.classList.add("active");
@@ -62,4 +63,26 @@ $(document).on("click", $(".th-units ul li button"), function(event) {
 dialogCloseBtn.on("click", () => {
     dialog.classList.remove("active");
     dialog.close();
+});
+
+dialogBtn.on("click", (event) => {
+    switch (event.target.innerText) {
+        case "Start quiz":
+            dialogThUnit.val(selectedThemUnit);
+            dialogForm.attr("action", "quiz.php");
+            dialogForm.submit();
+            break;
+
+        case "Flashcards":
+            dialogThUnit.val(selectedThemUnit);
+            dialogForm.attr("action", "flashcards.php");
+            dialogForm.submit();
+            break;
+
+        case "Study":
+            dialogThUnit.val(selectedThemUnit);
+            dialogForm.attr("action", "study.php");
+            dialogForm.submit();
+            break;
+    }
 });

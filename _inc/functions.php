@@ -47,7 +47,6 @@ function get_words() {
         FROM terms
         WHERE them_unit_id = 2;
     ");
-
     $results = $query->fetch_all();
     return $results;
 }

@@ -124,6 +124,8 @@ dialog {
     position: fixed;
     padding: 1.5rem 1.5rem 2rem;
     width: calc(500px - 2vw);
+    border: none;
+    border-radius: 1rem;
 }
 
 dialog.active {
@@ -133,6 +135,7 @@ dialog.active {
 
 dialog h2 {
     text-align: center;
+    line-height: 2.3rem;
 }
 
 .dialog-close-btn {
@@ -163,10 +166,11 @@ dialog h2 {
     cursor: pointer;
     border: none;
     background: #ccc;
+    transition: .2s;
 }
 
 .dialog-btn-holder button:hover {
-
+    background: #aaa;
 }
 
 .dialog-btn-holder button i {

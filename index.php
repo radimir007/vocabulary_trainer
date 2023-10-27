@@ -45,25 +45,27 @@
             </button>
             <h2>Undefined</h2>
             <section class="dialog-btn-holder">
-                <button>
+                <button id="btn-quiz">
                     <i class="fa-solid fa-play" style="color: green;"></i>
                     <span>Start quiz</span>
                 </button>
-                <button>
+                <button id="btn-flashcards">
                     <i class="fa-solid fa-clipboard-list" style="color: blue;"></i>
                     <span>Flashcards</span>
                 </button>
-                <button>
+                <button id="btn-study">
                     <i class="fa-solid fa-book-open" style="color: red;"></i>
                     <span>Study</span>
                 </button>
             </section>
-
         </dialog>
-
+        <form action="study.php" method="POST" class="dialog-form">
+            <input type="hidden" name="th_unit" id="dialog-th-unit">
+        </form>
     </main>
 
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/app.js"></script>
 </body>
+
 </html>
