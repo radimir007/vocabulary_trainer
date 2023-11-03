@@ -40,17 +40,24 @@ function get_th_units($subject) {
     return $results;
 }
 
-function get_words() {
+function get_words($unit_id) {
     global $db;
     $query = $db->query("
         SELECT term_def, term_desc
         FROM terms
-        WHERE them_unit_id = 2;
+        WHERE them_unit_id = $unit_id;
     ");
     $results = $query->fetch_all();
     return $results;
 }
 
-function get_terms() {
-
+function get_th_unit_name($unit_id) {
+    global $db;
+    $query = $db->query("
+        SELECT them_unit_name
+        FROM them_units
+        WHERE them_unit_id = $unit_id;
+    ");
+    $result = $query->fetch_row();
+    return $result;
 }
