@@ -12,9 +12,12 @@
             die("Something went wrong!");
 
         case "get_terms":
-            if (isset($_POST["unit"])) {
-                $unit = $_POST["unit"];
+            if (isset($_POST["unit_id"])) {
+                $unit = $_POST["unit_id"];
+                $result = get_words($unit);
+                die(json_encode($result, TRUE));
             }
             die("Something went wrong!");
 
     }
+

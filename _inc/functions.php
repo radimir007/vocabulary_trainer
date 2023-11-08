@@ -44,7 +44,7 @@ function get_words($unit_id) {
     global $db;
     $query = $db->query("
         SELECT term_def, term_desc
-        FROM terms
+        FROM terms 
         WHERE them_unit_id = $unit_id;
     ");
     $results = $query->fetch_all();

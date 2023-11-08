@@ -26,17 +26,12 @@
 
     <main>
         <ul>
-            <?php foreach (get_words($unit_id) as $term): ?>
-                <li>
-                    <span><?= $term[0] ?></span>
-                    <span><?= $term[1] ?></span>
-                </li>
 
-
-            <?php endforeach; ?>
         </ul>
     </main>
 
-
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+    <script src="assets/scripts/study.js"></script>
 </body>
 </html>

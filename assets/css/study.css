@@ -22,6 +22,7 @@ ul {
     padding: 0;
     list-style-type: none;
     display: block;
+    min-width: 40%;
 }
 
 li {
