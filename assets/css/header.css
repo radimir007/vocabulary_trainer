@@ -10,11 +10,17 @@ nav .logo img {
     max-width: 50px;
 }
 
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
 nav .logo a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: black;
+    min-width: 400px;
 }
 
 nav .logo span {

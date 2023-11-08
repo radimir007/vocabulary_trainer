@@ -1,0 +1,48 @@
+/* Web Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+body {
+
+    font-family: "Poppins", sans-serif;
+    padding: 1rem 6% 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    display: block;
+}
+
+li {
+    display: flex;
+    column-gap: 4rem;
+    padding: .2rem 0;
+    border-bottom: 2px dotted #777;
+    align-items: center;
+    font-size: .9rem;
+}
+
+span {
+    flex-basis: 50%;
+    line-height: 1.5rem;
+}
+
+li span:nth-child(1) {
+    font-weight: 500;
+}
+
+li span:nth-child(2) {
+    font-style: italic;
+    font-weight: 200;
+}
