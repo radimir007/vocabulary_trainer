@@ -25,9 +25,11 @@
     <?php include_once "_partials/header.php"?>
 
     <main>
+        <button class="prev">&lt;</button>
         <ul>
 
         </ul>
+        <button class="next">&gt;</button>
     </main>
 
     <script src="assets/scripts/jquery.min.js"></script>

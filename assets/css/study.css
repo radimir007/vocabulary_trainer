@@ -47,3 +47,12 @@ li span:nth-child(2) {
     font-style: italic;
     font-weight: 200;
 }
+
+main > button {
+    align-self: center;
+    margin: 0 3rem;
+    border: none;
+    background: none;
+    font-size: 3rem;
+    cursor: pointer;
+}
