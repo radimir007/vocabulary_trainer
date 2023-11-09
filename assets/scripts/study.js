@@ -1,6 +1,7 @@
 const wordList = $("ul");
 const nextPageBtn = $("button.next");
 const prevPageBtn = $("button.prev");
+const switches = $(".switches");
 
 const currentUnit = document.title.substring(5, 6);
 let currentPage = 1;
@@ -19,8 +20,14 @@ $.ajax({
         words = $.parseJSON(response);
         console.log(words);
         for (let i = (currentPage-1) * wordsPerPage; i < currentPage * wordsPerPage-1; i++) {
-            wordList.append($(`<li><span>${words[i][0]}</span><span>${words[i][1]}</span></li>`))
+            wordList.append($(`<li><span>${words[i][0]}</span><span>${words[i][1]}</span></li>`));
         }
+
+        let pageCount = Math.ceil(words.length / wordsPerPage);
+        for (let i = 0; i < pageCount; i++) {
+            switches.append($(`<small></small>`));
+        }
+        switches.find("small").eq(0).addClass("active");
     }
 });
 
@@ -40,6 +47,9 @@ prevPageBtn.on("click", function () {
 function changePage(currentPage, wordsPerPage) {
     wordList.fadeOut(500, function () {
         wordList.find("li").remove();
+
+        switches.find("small").removeClass("active");
+        switches.find("small").eq(currentPage-1).addClass("active");
 
         for (let i = (currentPage-1) * wordsPerPage; i < currentPage * wordsPerPage-1; i++) {
             if (i >= words.length) break;

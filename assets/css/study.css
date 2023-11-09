@@ -15,7 +15,7 @@ h1 {
 main {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 ul {
@@ -55,4 +55,24 @@ main > button {
     background: none;
     font-size: 3rem;
     cursor: pointer;
+}
+
+.switches {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.switches small {
+    width: 10px;
+    aspect-ratio: 1/1;
+    background: none;
+    border: 1px solid black;
+    transition: .2s;
+    border-radius: 50rem;
+    margin: 0 .5rem;
+}
+
+.switches small.active {
+    background: black;
 }

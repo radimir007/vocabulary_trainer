@@ -31,6 +31,9 @@
         </ul>
         <button class="next">&gt;</button>
     </main>
+    <div class="switches">
+
+    </div>
 
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/app.js"></script>
